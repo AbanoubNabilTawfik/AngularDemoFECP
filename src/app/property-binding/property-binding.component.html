@@ -1,0 +1,13 @@
+<p>property-binding works!</p>
+<input type="text" id="myId" />
+<br>
+<input type="text" [id]="textId" />
+<br>
+<input type="text" id={{textId}} />
+
+
+<br>
+<button disabled={{isDisabled}}>Click Me interpolation!</button>
+<button [disabled]="isDisabled">Click Me property binding!</button>
+
+
