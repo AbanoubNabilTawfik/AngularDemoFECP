@@ -12,6 +12,15 @@ import { InterpolationComponent } from './interpolation/interpolation.component'
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { ClassBindingComponent } from './class-binding/class-binding.component';
 import { StyleBindingComponent } from './style-binding/style-binding.component';
+import { EventBindingComponent } from './event-binding/event-binding.component';
+import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
+import { FormsModule } from '@angular/forms';
+import { StructualDirectivesComponent } from './structual-directives/structual-directives.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { CielnumberPipe } from './cielnumber.pipe';
+import { SquarePipe } from './square.pipe';
+import { EgyptionPoundPipe } from './egyption-pound.pipe';
+import { MaxarrayPipe } from './maxarray.pipe';
 
 @NgModule({
   declarations: [
@@ -24,11 +33,20 @@ import { StyleBindingComponent } from './style-binding/style-binding.component';
     InterpolationComponent,
     PropertyBindingComponent,
     ClassBindingComponent,
-    StyleBindingComponent
+    StyleBindingComponent,
+    EventBindingComponent,
+    TwoWayBindingComponent,
+    StructualDirectivesComponent,
+    PipesComponent,
+    CielnumberPipe,
+    SquarePipe,
+    EgyptionPoundPipe,
+    MaxarrayPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
