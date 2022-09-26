@@ -21,6 +21,10 @@ import { CielnumberPipe } from './cielnumber.pipe';
 import { SquarePipe } from './square.pipe';
 import { EgyptionPoundPipe } from './egyption-pound.pipe';
 import { MaxarrayPipe } from './maxarray.pipe';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +45,11 @@ import { MaxarrayPipe } from './maxarray.pipe';
     CielnumberPipe,
     SquarePipe,
     EgyptionPoundPipe,
-    MaxarrayPipe
+    MaxarrayPipe,
+    ParentComponent,
+    ChildComponent,
+    EmployeeListComponent,
+    EmployeeDetailsComponent
   ],
   imports: [
     BrowserModule,

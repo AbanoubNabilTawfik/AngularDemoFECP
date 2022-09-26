@@ -1,0 +1,8 @@
+<p>parent works!</p>
+{{dataFromChild}}
+
+<div *ngFor="let item of dataFromChildTwo">
+    {{item}}
+</div>
+
+<app-child  (childEventTwo)="dataFromChildTwo=$event" (childEvent)="dataFromChild=$event" [cars]="cars"  [parentData]="message" > </app-child>
