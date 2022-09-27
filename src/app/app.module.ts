@@ -25,7 +25,9 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
-
+import {HttpClientModule} from '@angular/common/http';
+import { ProductComponent } from './product/product.component';
+import { DepartmentsComponent } from './departments/departments.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,12 +51,15 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
     ParentComponent,
     ChildComponent,
     EmployeeListComponent,
-    EmployeeDetailsComponent
+    EmployeeDetailsComponent,
+    ProductComponent,
+    DepartmentsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
