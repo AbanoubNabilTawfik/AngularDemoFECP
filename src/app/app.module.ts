@@ -28,6 +28,12 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
 import {HttpClientModule} from '@angular/common/http';
 import { ProductComponent } from './product/product.component';
 import { DepartmentsComponent } from './departments/departments.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DepartmentDetailsComponent } from './department-details/department-details.component';
+import { ContactComponent } from './contact/contact.component';
+import { OverviewComponent } from './overview/overview.component';
+import { PricingComponent } from './pricing/pricing.component';
+import { AuthModule } from 'src/auth/auth.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,13 +59,19 @@ import { DepartmentsComponent } from './departments/departments.component';
     EmployeeListComponent,
     EmployeeDetailsComponent,
     ProductComponent,
-    DepartmentsComponent
+    DepartmentsComponent,
+    PageNotFoundComponent,
+    DepartmentDetailsComponent,
+    ContactComponent,
+    OverviewComponent,
+    PricingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
