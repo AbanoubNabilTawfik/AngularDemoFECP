@@ -1,0 +1,48 @@
+<div class="container">
+    <form #userForm="ngForm" novalidate (ngSubmit)="saveData()">
+        {{userForm.value |json}}
+        <br>
+        {{userModel|json}}
+         <div class="form-group">
+            <label>Name :</label>
+            <input type="text" required [class.is-invalid]="name.invalid && name.touched" [(ngModel)]="userModel.name" name="txtName" #name="ngModel" class="form-control">
+            <small *ngIf="name.invalid && name.touched" class="text-danger">Name is Required</small>
+        </div>
+
+         <div class="form-group">
+            <label>Email :</label>
+            <input type="email" required [class.is-invalid]="email.invalid && email.touched" [(ngModel)]="userModel.email" name="txtEmail" #email="ngModel"  class="form-control">
+            <small class="text-danger" *ngIf="email.invalid && email.touched">Email is required</small>
+        </div>
+
+         <div class="form-group">
+            <label>Phone :</label>
+            <input type="tel" required pattern="^\d{11}$" [class.is-invalid]="phone.invalid && phone.touched" [(ngModel)]="userModel.phone" name="txtPhone" #phone="ngModel"  class="form-control">
+            
+            <div *ngIf="phone.errors && phone.touched">
+                <small class="text-danger" *ngIf="phone.errors?.['required']" >Phone is required</small>
+                <small class="text-danger" *ngIf="phone.errors?.['pattern']">Phone must be 11 digits</small>
+            </div>
+             
+        </div>
+
+         <div class="form-group">
+            <select class="custom-select" [(ngModel)]="userModel.topic" name="ddlTopics" #topic="ngModel" >
+                <option>im intersted in</option>
+                <option *ngFor="let topic of topics">
+                    {{topic}}
+                </option>
+            </select>
+         </div>
+
+         <div class="form-check mb-3">
+            <input type="checkbox" [(ngModel)]="userModel.offers" name="chkOffers" #offer="ngModel" class="form-check-input">
+            <label class="form-check-label">
+                Send me new offers
+            </label>
+         </div>
+
+         <input [disabled]="userForm.form.invalid" type="submit" class="btn btn-primary" value="SUBMIT">
+         
+    </form>
+</div>

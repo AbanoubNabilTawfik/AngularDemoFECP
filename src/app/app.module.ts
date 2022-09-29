@@ -34,6 +34,7 @@ import { ContactComponent } from './contact/contact.component';
 import { OverviewComponent } from './overview/overview.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { AuthModule } from 'src/auth/auth.module';
+import { TdfComponent } from './tdf/tdf.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,7 +65,8 @@ import { AuthModule } from 'src/auth/auth.module';
     DepartmentDetailsComponent,
     ContactComponent,
     OverviewComponent,
-    PricingComponent
+    PricingComponent,
+    TdfComponent
   ],
   imports: [
     BrowserModule,
